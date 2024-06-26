@@ -1,5 +1,5 @@
-const sum = require("./fizz-buzz");
+const fizzBuzz = require("./fizz-buzz");
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+test('fizzBuzz returns "Error: integer values only" if value passed in is not an integer', () => {
+  expect(fizzBuzz(1.45)).toBe("Error: integer values only");
 });

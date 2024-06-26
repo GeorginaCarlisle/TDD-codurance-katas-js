@@ -16,6 +16,10 @@ A repository to hold all Codurance katas completed using JavaScript and JEST.
 
 [Set-up steps](#set-up-steps)
 
+[JEST notes](#jest-notes)
+
+[JSDoc notes](#jsdoc-notes)
+
 ---
 
 ## Introduction to TTD
@@ -40,6 +44,7 @@ Challenges:
 
 - Poor and rusty JEST testing skills
 - Basic TTD knowledge and only used briefly before
+- First time attempting to use JSDoc code comments
 
 Learning to carry forward:
 
@@ -48,6 +53,13 @@ Learning to carry forward:
 ### Contents for katas
 
 ## Tools and Tech
+
+### Languages
+
+JavaScript
+JSDoc - [documentation](https://jsdoc.app/)
+
+### Frameworks
 
 [JEST](https://jestjs.io/) - A JavaScript Testing Framework
 
@@ -60,3 +72,51 @@ Learning to carry forward:
 3 - 'npm install --save-dev jest' to install the jest framework to run in development only.
 
 4 - Create .gitignore file and include node_modules.
+
+### JEST notes
+
+[JEST documentation](https://jestjs.io/)
+
+### JSDoc notes
+
+[JSDoc documentation](https://jsdoc.app/)
+
+A function documentation comment should be given to all functions to aid readability, maintenance and understanding.
+
+Using specific JSDoc markup language will lead to:
+
+- Clearer comments and therefore increased readability and code that's easier to understand and maintain in the future.
+- Consistency of code comments across the full repository. With this consistency helping to ensure a high level of code comments are maintained (less likely to forget to include important info, as well as keeping info clear and to the point) and increasing the readability of the code.
+- A number of tools available that can then search/pull JSDoc comments out of the code. Examples include: Automatic generation of documentation, intellisense tools can use JSDoc comments to provide better prompts/autocompletion to coders.
+
+#### Key elements to a JSDoc tag
+
+Tag should be created as a multi-line comment and sit directly above the function.
+
+```javascript
+/**
+*
+*
+*/
+function exampleFunction(){
+
+}
+```
+
+All tags should include a description at the top followed by further information about the function using recognized JSDoc tags.
+
+```javascript
+/**
+* Clear concise description of the function
+* @param {string} email - users email address
+* @returns {boolean} Email exists within database
+*/
+```
+
+#### Tags used within this repository
+
+@param {number} classSize - Number of children in the class.
+  Where number is the data type the parameter expects, classSize is the name of the parameter and then a brief description.
+
+@returns {boolean} True if the class size is less than 30, otherwise false.
+  Where boolean is the data type of the returned value followed by a brief description.
