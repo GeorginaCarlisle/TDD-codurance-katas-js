@@ -73,6 +73,28 @@ JSDoc - [documentation](https://jsdoc.app/)
 
 4 - Create .gitignore file and include node_modules.
 
+### TDD notes
+
+The "why" of TDD is that by concentrating on the simplest solution possible and working step by step starting with the simplest unit of functionality and elegant solution will emerge.
+
+#### First principle of TDD
+
+"You are not allowed to write any production code unless it is for making a failing unit test pass."
+The focus should then be on writing just enough code to pass the test. This includes **faking it!** and writing the **obvious implementation**.
+
+#### Rule of three
+
+When duplication starts to emerge, allow a pattern to emerge before refactoring. Conformation to the **DRY priniciple** should be the ultimate goal BUT by holding off initially (deferring decision making) you will be able to hit on a solution that better fits the pattern. Rather than rushing in before truly understanding the pattern.
+The rule of three suggests deferring refactoring until three cases of obvious redundancy are seen.
+
+#### Extra info
+
+**Validation**:
+Good code design suggests separating the responsibility of checking input validity from the responsibility of executing the algorithm. The realtes to the principle "Separation of Concerns". In these katas the focus will be on algorithm execution.
+
+**Naming tests**:
+The best practice is to use names that describe the business functionality or feature. This allows you to refactor your code such that, as long as the business behaviour remains the same, you should not have to change your test name.
+
 ### JEST notes
 
 [JEST documentation](https://jestjs.io/)

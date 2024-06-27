@@ -1,5 +1,9 @@
 const fizzBuzz = require("./fizz-buzz");
 
-test('fizzBuzz returns "Error: integer values only" if value passed in is not an integer', () => {
-  expect(fizzBuzz(1.45)).toBe("Error: integer values only");
+test('fizzBuzz converts 1 to "1"', () => {
+  expect(fizzBuzz(1)).toBe("1");
+});
+
+test('fizzBuzz converts 2 to "2"', () => {
+  expect(fizzBuzz(2)).toBe("2");
 });
