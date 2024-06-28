@@ -20,6 +20,10 @@ A repository to hold all Codurance katas completed using JavaScript and JEST.
 
 [JSDoc notes](#jsdoc-notes)
 
+[Credits](#credits)
+
+[Acknowledgements](#acknowledgements)
+
 ---
 
 ## Introduction to TTD
@@ -82,10 +86,20 @@ The "why" of TDD is that by concentrating on the simplest solution possible and 
 "You are not allowed to write any production code unless it is for making a failing unit test pass."
 The focus should then be on writing just enough code to pass the test. This includes **faking it!** and writing the **obvious implementation**.
 
+#### Driving tdd
+
+At every stage ask
+"What particular behaviour in the specification are we driving towards?"
+
+Focusing on the simplest unit of functionality first! And not adding any additional features until the current one is fully implemented.
+
 #### Rule of three
 
 When duplication starts to emerge, allow a pattern to emerge before refactoring. Conformation to the **DRY priniciple** should be the ultimate goal BUT by holding off initially (deferring decision making) you will be able to hit on a solution that better fits the pattern. Rather than rushing in before truly understanding the pattern.
+
 The rule of three suggests deferring refactoring until three cases of obvious redundancy are seen.
+
+Once a rule-of-three violation occurs a leap needs to be made from a specific solution to a more generic one. Associated tests will also need refactoring to avoid duplication. This could be done by using a parameterized test case.
 
 #### Extra info
 
@@ -98,6 +112,20 @@ The best practice is to use names that describe the business functionality or fe
 ### JEST notes
 
 [JEST documentation](https://jestjs.io/)
+
+#### Parameterized test cases
+
+JESTs test.each() method can be used to add multiple parameters to be tested within one test case. Example from the fizz-buzz kata:
+
+``` javascript
+test.each([
+  [1, "1"],
+  [2, "2"],
+  [4, "4"],
+])('fizzBuzz converts standard numbers to their string equivalent', (input, expected) => {
+  expect(fizzBuzz(input)).toBe(expected);
+});
+```
 
 ### JSDoc notes
 
@@ -142,3 +170,13 @@ All tags should include a description at the top followed by further information
 
 @returns {boolean} True if the class size is less than 30, otherwise false.
   Where boolean is the data type of the returned value followed by a brief description.
+
+## Credits
+
+### TDD learning
+
+The TDD notes were created following reading information provided at the following locations and comprise of a mixture of my summary and understanding with some directly copied information.
+
+- [Codurance guided TDD kata](https://www.codurance.com/katas/fizzbuzz)
+
+## Acknowledgements

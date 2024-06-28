@@ -4,8 +4,7 @@
  * @returns {string} The number given as a string
  */
 function fizzBuzz(number) {
-  if (number == 2) return "2";
-  return "1";
+  return number.toString();
 }
 
 module.exports = fizzBuzz;

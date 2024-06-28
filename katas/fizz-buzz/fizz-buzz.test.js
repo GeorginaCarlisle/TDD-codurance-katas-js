@@ -1,9 +1,9 @@
 const fizzBuzz = require("./fizz-buzz");
 
-test('fizzBuzz converts 1 to "1"', () => {
-  expect(fizzBuzz(1)).toBe("1");
-});
-
-test('fizzBuzz converts 2 to "2"', () => {
-  expect(fizzBuzz(2)).toBe("2");
+test.each([
+  [1, "1"],
+  [2, "2"],
+  [4, "4"],
+])('fizzBuzz converts standard numbers to their string equivalent', (input, expected) => {
+  expect(fizzBuzz(input)).toBe(expected);
 });
