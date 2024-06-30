@@ -12,6 +12,14 @@ test.each([
   [3, "Fizz"],
   [6, "Fizz"],
   [9, "Fizz"]
-])('fizzBuzz returns Fizz for integers of 3', (input, expected) => {
+])('fizzBuzz returns Fizz for multiples of 3', (input, expected) => {
+  expect(fizzBuzz(input)).toBe(expected);
+});
+
+test.each([
+  [5, "Buzz"],
+  [10, "Buzz"],
+  [20, "Buzz"]
+])('fizzBuzz returns Buzz for multiples of 5', (input, expected) => {
   expect(fizzBuzz(input)).toBe(expected);
 });
