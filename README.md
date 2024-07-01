@@ -34,12 +34,14 @@ This repository contains multiple Katas. In order to keep everything organised e
 
 ## Current Kata being completed
 
+## Completed Katas
+
 ### FizzBuzz
 
 [Kata instructions and information](https://www.codurance.com/katas/fizzbuzz)
 
 Start date: 24/06/24
-Completed date:
+Completed date: 01/07/24
 
 Overview:
 A kata design to introduce TTD and provide guidance. Chosen to check understanding of TTD and bring rusty skills back into use.
@@ -52,7 +54,9 @@ Challenges:
 
 Learning to carry forward:
 
-## Completed Katas
+- Priniciples of TDD and how to approach.
+- Basic use of JEST including adding testing parameters.
+- Basic use of JSDoc comments.
 
 ### Contents for katas
 
