@@ -11,7 +11,7 @@ test.each([
 test.each([
   [3, "Fizz"],
   [6, "Fizz"],
-  [9, "Fizz"]
+  [9, "Fizz"],
 ])('fizzBuzz returns Fizz for multiples of 3', (input, expected) => {
   expect(fizzBuzz(input)).toBe(expected);
 });
@@ -19,7 +19,7 @@ test.each([
 test.each([
   [5, "Buzz"],
   [10, "Buzz"],
-  [20, "Buzz"]
+  [20, "Buzz"],
 ])('fizzBuzz returns Buzz for multiples of 5', (input, expected) => {
   expect(fizzBuzz(input)).toBe(expected);
 });
@@ -27,7 +27,7 @@ test.each([
 test.each([
   [15, "FizzBuzz"],
   [30, "FizzBuzz"],
-  [45, "FizzBuzz"]
+  [45, "FizzBuzz"],
 ])('fizzBuzz returns FizzBuzz for multiples of 3 and 5', (input,expected) => {
   expect(fizzBuzz(input)).toBe(expected);
 });
