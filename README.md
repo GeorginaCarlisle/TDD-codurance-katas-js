@@ -34,11 +34,28 @@ This repository contains multiple Katas. In order to keep everything organised e
 
 ## Current Kata being completed
 
+### Stack
+
+[Stack instructions and information](https://www.codurance.com/katas/stack)
+
+Start date: 02/07/24
+Completed date:
+
+Overview:
+A beginner kata focusing on Algorithm design and data structures.
+
+Challenges:
+
+- Still new to TDD katas and no extra guidance for this kata.
+- Object Orientated Programming principles may be helpful in this kata.
+
+Learning to carry forward:
+
 ## Completed Katas
 
 ### FizzBuzz
 
-[Kata instructions and information](https://www.codurance.com/katas/fizzbuzz)
+[FizzBuzz instructions and information](https://www.codurance.com/katas/fizzbuzz)
 
 Start date: 24/06/24
 Completed date: 01/07/24
@@ -130,6 +147,16 @@ test.each([
   expect(fizzBuzz(input)).toBe(expected);
 });
 ```
+
+#### Matchers
+
+JEST uses matchers to compare the returned value with expected value. Matchers used within this repo:
+
+toBe - Passes if the two values reference the same object within memory or have the same primitive value. Using toBe on arrays and objects may not work as expected as although the returned and expected values may have the same content, they are actually two separate objects.
+(See fizz-buzz for use, and change toEqual to toBe in stack to see the problem caused with the array there)
+
+toEqual - Passes if the two values have the same structure and content.
+(See stack)
 
 ### JSDoc notes
 
