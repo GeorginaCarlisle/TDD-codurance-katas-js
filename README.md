@@ -158,6 +158,16 @@ toBe - Passes if the two values reference the same object within memory or have 
 toEqual - Passes if the two values have the same structure and content.
 (See stack)
 
+#### Describe blocks
+
+Describe blocks can be used to group related tests together. (See stack)
+
+#### Presetting data
+
+Function variables can be specifically populated prior to or as part of the test. (See stack)
+
+beforeEach() hook - can be used to define steps to be undertaken before each test. Usually used as a way to provide test isolation.
+
 ### JSDoc notes
 
 [JSDoc documentation](https://jsdoc.app/)
@@ -204,10 +214,13 @@ All tags should include a description at the top followed by further information
 
 ## Credits
 
-### TDD learning
+## Acknowledgements
 
-The TDD notes were created following reading information provided at the following locations and comprise of a mixture of my summary and understanding with some directly copied information.
+The **notes** contained in this document were created following the reading of information provided by the below sources. There may be some directly copied information, but the majority of the notes are in my own words.
+
+The **code** contained in this repository was written by me while, however as a learning exercise it has been heavily influenced by guidance gained from the sources below.
 
 - [Codurance guided TDD kata](https://www.codurance.com/katas/fizzbuzz)
-
-## Acknowledgements
+- [JEST documentation](https://jestjs.io/)
+- [JSDoc documentation](https://jsdoc.app/)
+- [ChatGPT](https://chatgpt.com/)

@@ -1,7 +1,8 @@
 const stack = {
+  callStack: [],
   push: function(input) {
     this.callStack.push(input)
-    return [input];
+    return this.callStack;
   }
 }
 
