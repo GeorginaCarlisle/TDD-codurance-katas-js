@@ -41,3 +41,19 @@ describe('stack pop operation', () => {
     expect(stack.callStack).toEqual(["First element"])
   });
 });
+
+describe('stack emptyCheck operation', () => {
+  beforeEach(() => {
+    //Ensures test isolation by ensuring an empty stack at the start of each test
+    stack.callStack = [];
+  });
+
+  test('Empty stack returns true', () => {
+    expect(stack.emptyCheck()).toBe(true);
+  });
+
+  test('Stack containing at least one element returns false', () => {
+    stack.callStack = ["First element"];
+    expect(stack.emptyCheck()).toBe(false);
+  });
+});

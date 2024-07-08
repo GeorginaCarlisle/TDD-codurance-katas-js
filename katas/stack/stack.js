@@ -6,7 +6,14 @@ const stack = {
   },
   pop: function() {
     return this.callStack.pop();
+  },
+  emptyCheck: function() {
+    if (this.callStack.length === 0){
+      return true;
+    } else {
+      return false;
+    } 
   }
-}
+};
 
 module.exports = stack;
