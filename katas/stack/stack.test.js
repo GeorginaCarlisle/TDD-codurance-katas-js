@@ -22,3 +22,22 @@ describe('stack push operation', () => {
     expect(stack.callStack).toEqual(["First item", "Second item"]);
   });
 })
+
+describe('stack pop operation', () => {
+  beforeEach(() => {
+    //Ensures test isolation by resetting the stack to include the same two elements
+    stack.callStack = [
+      "First element",
+      "Second element"
+    ];
+  });
+
+  test('returns the top element of the stack', () => {
+    expect(stack.pop()).toBe("Second element");
+  });
+
+  test('top element removed from the call stack', () => {
+    stack.pop();
+    expect(stack.callStack).toEqual(["First element"])
+  });
+});
