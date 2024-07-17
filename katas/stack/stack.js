@@ -13,6 +13,9 @@ const stack = {
     } else {
       return false;
     } 
+  },
+  size: function() {
+    return this.callStack.length;
   }
 };
 

@@ -57,3 +57,25 @@ describe('stack emptyCheck operation', () => {
     expect(stack.emptyCheck()).toBe(false);
   });
 });
+
+describe('stack size operation', () => {
+  beforeEach(() => {
+    //Ensures test isolation by ensuring an empty stack at the start of each test
+    stack.callStack = [];
+  });
+
+  test('Empty stack returns 0', () => {
+    expect(stack.size()).toBe(0);
+  });
+
+  test('Stack of 1 returns 1', () => {
+    stack.push('first element');
+    expect(stack.size()).toBe(1);
+  });
+
+  test('Stack of 2 returns 2', () => {
+    stack.push('first element');
+    stack.push('second element');
+    expect(stack.size()).toBe(2);
+  });
+});
